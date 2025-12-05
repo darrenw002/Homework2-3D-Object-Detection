@@ -1,0 +1,21 @@
+# Virtual environment
+.venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Model checkpoints
+checkpoints/
+*.pth
+*.bin
+
+# Datasets
+data/
+
+# Large outputs
+outputs/
+
+# IDE/project files
+.vscode/
+.idea/

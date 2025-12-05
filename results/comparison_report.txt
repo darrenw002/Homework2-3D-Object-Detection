@@ -1,0 +1,94 @@
+================================================================================
+DETAILED METRICS
+================================================================================
+
+PointPillars (KITTI):
+  Dataset: KITTI
+  Number of Detections: 10
+  Score Statistics:
+    Mean: 0.792
+    Std:  0.169
+    Min:  0.442
+    Max:  0.975
+    Median: 0.830
+  Confidence Distribution:
+    High (>=0.7):   8
+    Medium (0.5-0.7): 1
+    Low (<0.5):    1
+  Percentiles:
+    P25: 0.718
+    P75: 0.932
+    P90: 0.969
+
+PointPillars (nuScenes):
+  Dataset: ANY
+  Number of Detections: 365
+  Score Statistics:
+    Mean: 0.127
+    Std:  0.095
+    Min:  0.050
+    Max:  0.711
+    Median: 0.093
+  Confidence Distribution:
+    High (>=0.7):   1
+    Medium (0.5-0.7): 3
+    Low (<0.5):    361
+  Percentiles:
+    P25: 0.071
+    P75: 0.135
+    P90: 0.242
+
+CenterPoint (nuScenes):
+  Dataset: ANY
+  Number of Detections: 264
+  Score Statistics:
+    Mean: 0.244
+    Std:  0.183
+    Min:  0.100
+    Max:  0.874
+    Median: 0.162
+  Confidence Distribution:
+    High (>=0.7):   15
+    Medium (0.5-0.7): 19
+    Low (<0.5):    230
+  Percentiles:
+    P25: 0.125
+    P75: 0.274
+    P90: 0.567
+
+================================================================================
+COMPARISON TABLE
+================================================================================
+
++-------------------------+----------------------+----------------------+----------------------+----------------------+----------------------+----------------------+----------------------+----------------------+----------------------+
+| Model                   | Dataset              | Detections           | Mean Score           | Max Score            | High Conf (>=0.7)    | Inference Time (s)   | FPS                  | GPU Mem (GB)         | Score Std            |
++-------------------------+----------------------+----------------------+----------------------+----------------------+----------------------+----------------------+----------------------+----------------------+----------------------+
+| PointPillars (KITTI)    | KITTI                | 10                   | 0.792                | 0.975                | 8                    | N/A                  | N/A                  | N/A                  | 0.169                |
++-------------------------+----------------------+----------------------+----------------------+----------------------+----------------------+----------------------+----------------------+----------------------+----------------------+
+| PointPillars (nuScenes) | ANY                  | 365                  | 0.127                | 0.711                | 1                    | N/A                  | N/A                  | N/A                  | 0.095                |
++-------------------------+----------------------+----------------------+----------------------+----------------------+----------------------+----------------------+----------------------+----------------------+----------------------+
+| CenterPoint (nuScenes)  | ANY                  | 264                  | 0.244                | 0.874                | 15                   | N/A                  | N/A                  | N/A                  | 0.183                |
++-------------------------+----------------------+----------------------+----------------------+----------------------+----------------------+----------------------+----------------------+----------------------+----------------------+
+================================================================================
+SUMMARY STATISTICS
+================================================================================
+Total Detections Across All Models: 639
+Average Detections per Model: 213.0
+Average Mean Score: 0.388
+Total High Confidence Detections (>=0.7): 24
+
+Best Performers:
+  Highest Mean Score: PointPillars (KITTI) (0.792)
+  Most Detections: PointPillars (nuScenes) (365)
+  Most High Confidence: CenterPoint (nuScenes) (15)
+
+================================================================================
+NOTES
+================================================================================
+• Metrics Calculated: Detection counts, score statistics, confidence distribution
+• Inference Time & FPS: Can be enabled by uncommenting measurement code
+• GPU Memory: Shows current allocated memory (may vary)
+• mAP/AP: Requires ground truth annotations for calculation
+• Precision/Recall: Requires ground truth annotations for calculation
+• IoU: Requires ground truth bounding boxes for calculation
+================================================================================
